@@ -1,0 +1,64 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue-carousel@0.18.0/dist/vue-carousel.min.js"></script>
+<script>
+$(function() {
+            //ページトップへのスクロール
+            $('#pagetop').click(function () {
+                //id名#pagetopがクリックされたら、以下の処理を実行
+                $("html,body").animate({scrollTop:0},"300");
+            });
+            //ページトップの出現
+            $('#pagetop').hide();
+            $(window).scroll(function () {
+                if($(window).scrollTop() > 0) {
+                    $('#pagetop').slideDown(600);
+                } else {
+                    $('#pagetop').slideUp(600);
+                }
+            });
+            
+        });
+
+
+var Link=new $(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 800;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
+
+
+
+window.onscroll = function(){
+  var scrollTop = window.pageYOffset ;   //スクロール量を取得
+  if (scrollTop < 18000 ) { 　　
+    $('body').css('background-image', 'url(https://www.sozailab.jp/db_img/sozai/49644/5d3e6234c3eab5203aad1df111f90f5d.png)');
+    $('body').css('transition', '1.3s')
+  }
+  if (scrollTop > 18501 && scrollTop < 37000) { 
+    $('body').css('background-image', 'url(https://www.wp-benricho.com/www/wp-content/uploads/2016/04/sample01.png)');
+    $('body').css('transition', '1.3s')
+  }
+  if (scrollTop > 37001 && scrollTop < 55500) { 
+    $('body').css('background-image', 'url(https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-style-red-background-red-pattern-new-years-image_18277.jpg)');
+    $('body').css('transition', '1.3s')
+  }
+}
+
+
+var app=new Vue({
+  el: "#app",
+  components: {
+    'carousel': VueCarousel.Carousel,
+    'slide': VueCarousel.Slide
+  },
+});
+
+</script>
+

@@ -1,0 +1,75 @@
+<style>
+
+.container {
+  width: 2500px;
+  display: -webkit-flex;
+  display: flex;
+}
+.main {
+  display: block;
+  width: 800px;
+  margin-right: 20px;
+}
+.sidebar {
+  width: 320px;
+}
+.sidebar__item {
+  margin-bottom: 20px;
+}
+.sidebar__item--fixed {
+  position: sticky;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+}
+
+body{
+    background-image: url(https://www.sozailab.jp/db_img/sozai/49644/5d3e6234c3eab5203aad1df111f90f5d.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.title-S{
+  display        : inline-block;
+  color          : #ffffff;            /* 文字の色 */
+  font-size      : 36pt;               /* 文字のサイズ */
+  letter-spacing : 2px;                /* 文字間 */
+  text-shadow    : 
+       2px  2px 0px #000000,
+      -2px  2px 0px #000000,
+       1px -2px 0px #000000,
+      -2px -2px 0px #000000,
+       2px  0px 0px #000000,
+       0px  2px 0px #000000,
+      -2px  0px 0px #000000,
+       0px -2px 0px #000000;
+       
+       font-family:'Lato', sans-serif;
+       }
+       
+.VueCarousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing:border-box;
+  font-size:12px;
+  text-align:center;
+}
+
+#pagetop{
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  width: 70px;
+  height: 70px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  background: #5bc8ac;
+  z-index:9999; <!-- nav-barを最上レイヤーにする -->
+}
+.Page-Btn-Icon{
+  color: rgb(255, 255, 255);
+}
+</style>
